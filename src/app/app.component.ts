@@ -25,12 +25,12 @@ import { Component } from '@angular/core';
     </ul>
     <div [innerHtml]="'Set inner html in js'"></div>
     <div innerHtml="{{'Set inner html in js'}}"></div>
-    <table [attr.border]="true" [attr.width]="500">
+    <table [attr.border]="true" [attr.width]="500">  
       <tr>
         <td [attr.colspan]="1+4"> sdfsdf</td>
       </tr>
     </table>
-    
+    <app-counter></app-counter>
   `,
   styles: []
 })
