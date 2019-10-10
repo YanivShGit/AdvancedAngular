@@ -3,32 +3,32 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DayOne": {
+    "day2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
+      "root": "projects/day2",
+      "sourceRoot": "projects/day2/src",
+      "prefix": "m",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DayOne",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/day2",
+            "index": "projects/day2/src/index.html",
+            "main": "projects/day2/src/main.ts",
+            "polyfills": "projects/day2/src/polyfills.ts",
+            "tsConfig": "projects/day2/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/day2/src/favicon.ico",
+              "projects/day2/src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "projects/day2/src/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/day2/src/environments/environment.ts",
+                  "with": "projects/day2/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -67,21 +67,101 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DayOne:build"
+            "browserTarget": "day2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DayOne:build:production"
+              "browserTarget": "day2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DayOne:build"
+            "browserTarget": "day2:build"
+          }
+        }
+      }
+    },
+    "day1": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/day1",
+      "sourceRoot": "projects/day1/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/day1",
+            "index": "projects/day1/src/index.html",
+            "main": "projects/day1/src/main.ts",
+            "polyfills": "projects/day1/src/polyfills.ts",
+            "tsConfig": "projects/day1/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/day1/src/favicon.ico",
+              "projects/day1/src/assets"
+            ],
+            "styles": [
+              "projects/day1/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/day1/src/environments/environment.ts",
+                  "with": "projects/day1/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "day1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "day1:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "day1:build"
           }
         }
       }
     }},
-  "defaultProject": "DayOne"
+  "defaultProject": "day2"
 }
