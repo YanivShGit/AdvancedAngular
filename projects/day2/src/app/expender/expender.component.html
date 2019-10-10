@@ -1,0 +1,4 @@
+<div (click)="setActive()">{{this.title}}</div>
+<div *ngIf="this.active">
+    <ng-content></ng-content>
+   </div>

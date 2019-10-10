@@ -1,5 +1,10 @@
-<p>tabs works!</p>
-<m-panel title="first"></m-panel>
-<m-panel title="second"></m-panel>
-<ng-content></ng-content>
-
+<div class="tabs-layout">
+    <div class="tabs">
+      <span *ngFor="let panel of panels" [class.active]="panel.active">
+        <a href="#" (click)="setActive(panel)">{{panel.title}}</a> |
+      </span>
+    </div>
+    <div class="panels">
+      <ng-content></ng-content>
+    </div>
+  </div>

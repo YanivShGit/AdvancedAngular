@@ -12,8 +12,20 @@ import { Component } from '@angular/core';
       <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
     </div>     
 
+    <m-drop-down>
+    
+    </m-drop-down>
+    <m-accordion>
+      <m-expender title="first"> first expendor</m-expender>
+      <m-expender title="second"> second expendor</m-expender>
+      <m-expender title="third"> third expendor</m-expender>
+    </m-accordion>
+    
     <m-tabs >
-      <m-panel title="inline panel"></m-panel>
+      <m-panel title="inline panel 1" >Tab 1</m-panel>
+      <m-panel title="inline panel 2" >Tab 2</m-panel>
+      <m-panel title="inline panel 3" >Tab 3</m-panel>
+      <m-panel title="inline panel 4" >Tab 4</m-panel>
         erterterterte
     </m-tabs>
     <h2>Here are some links to help you start: </h2>

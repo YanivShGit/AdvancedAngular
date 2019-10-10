@@ -1,0 +1,8 @@
+<p>drop-down works!</p>
+<input type="text" />
+<div *ngFor="let i of items" >
+    <span *ngIf="!tabTemplate; else temp">{{i.title}}</span>
+             <ng-template #temp>
+               <ng-container *ngTemplateOutlet="tabTemplate; context: {ctx : {title:i.title,index:i} }"></ng-container>
+             </ng-template>
+</div>
