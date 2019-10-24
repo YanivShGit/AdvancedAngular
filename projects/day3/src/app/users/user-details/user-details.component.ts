@@ -16,7 +16,7 @@ export class UserDetailsComponent implements OnInit {
   constructor(private route : ActivatedRoute, private userBl:UsersBlService) { 
     route.params.pipe(
       tap( params => this.id = params.userId),
-      tap( params => this.mode = params.mode),
+      tap( params => params.mode ? this.mode = params.mode : this.mode= 'view'),
       tap( params => {
                 this.userDetails = this.userBl.users
                         .find( u => u.login.username == params.userId);
