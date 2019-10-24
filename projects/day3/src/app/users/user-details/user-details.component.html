@@ -1,0 +1,15 @@
+<div>
+    user-details works! id: <strong>{{id}}</strong> <br>
+    <a [routerLink]="[{mode:'edit'}]">Edit</a><br> mode: {{mode}}
+    <hr>  
+    <pre *ngIf="mode !=='edit'; else edit">
+      {{ userDetails?.name | json }}
+    </pre>
+      
+    <ng-template #edit>
+        <p>
+            user-details-edit works!
+          </p>
+    </ng-template>  
+      
+  </div>

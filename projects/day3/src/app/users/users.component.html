@@ -1,0 +1,12 @@
+<div class="layout">
+    <div class="menu">
+      <div *ngFor="let user of users"
+          [routerLink]="[user.login.username]"
+    >
+      {{ user.name.first}} {{ user.name.last }}
+    </div>
+    </div>  
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
