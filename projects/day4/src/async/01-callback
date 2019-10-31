@@ -1,0 +1,31 @@
+flow(1);
+
+async function flow1(n:number){
+    p1 = await action(number);
+}
+
+function flow(n:number) {
+    console.log(`start`);
+    action( n , (r1)=> {
+        console.log(`result : ${r1}`);
+        action( n , (r2)=> {
+            console.log(`result : ${r2}`);
+            action( n , (r3)=> {
+                console.log(`result : ${r3}`);
+            } );
+        } );
+    } );
+    console.log(`end`);
+}
+
+
+
+export function action(
+        n        : number,
+        callback : (result:number)=>void ) : void {
+
+    setTimeout(()=>{
+        callback(n++);
+    },1000);
+
+}

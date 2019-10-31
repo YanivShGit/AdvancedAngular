@@ -1,0 +1,30 @@
+function flow(n:number) {
+
+    return action(n)
+        .then( r1 => action(r1) )
+        .then( r2 =>  {
+            console.log(r2);
+            return r2;
+        } )
+        .then(action)
+        .then(action)
+        .catch( error => console.log(`error:${error}`) );
+
+
+   /* let p1 =  action(n);
+    let p2 = p1.then( r1 => action(r1) );
+    let p3 = p2.then( r2 => action(r2) );
+    */
+
+}
+
+
+
+
+export function action( n : number) : Promise<number> {
+    return new Promise<number>( (resolve,reject) => {
+        setTimeout(()=>{
+            resolve(n++);
+        },1000);
+    });
+}
