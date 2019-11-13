@@ -15,7 +15,7 @@ export class TimerService {
 
       zone.runOutsideAngular( () => { 
 
-          interval(50).pipe(
+          interval(400).pipe(
               tap( n => this.hotSource.next(n) )
           ).subscribe();
 

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  list=new Array(20000);
+  list=new Array(14);//(30000);
   title = 'day5';
 }
